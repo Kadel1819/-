@@ -1,0 +1,69 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+#div1 {
+	margin: 10px auto; /*div1居中*/
+	width: 100px;
+	height: 100px; /*宽和高*/
+	border: 1px solid #ccc; /*边框*/
+	padding: 2px; /*内边距*/
+	position: relative; /*父元素相对定位，子元素才能相对父元素绝对定位*/
+}
+
+#img {
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+#div2 {
+	width: 200px;
+	height: 100px;
+	position: absolute; /*子元素绝对定位*/
+	bottom: -110px;
+	left: 0;
+	margin-left: -50%;
+	border: 1px solid #666;
+	background: #EEE;
+	text-align: center;
+	display: none;
+}
+</style>
+<script>
+	// 判断数组中包含element元素
+	Array.prototype.contains = function(element) {
+		for (var i = 0; i < this.length; i++) {
+			if (this[i] == element) {
+				return true;
+			}
+		}
+		return false;
+	}
+	window.onload = function() {
+		var oDiv1 = document.getElementById('div1');
+		var oDiv2 = document.getElementById('div2');
+		document.onmouseover = function(e) {
+			if (!oDiv1.contains(e.target)) {
+				oDiv2.style.display = "none";
+			}
+		}
+		oDiv1.onmouseover = function() {
+			oDiv2.style.display = "block";
+		}
+	};
+</script>
+</head>
+<body style="text-align: center;">
+	<div id="div1">
+		<div id="img" title="">我来代表图片</div>
+		<div id="div2">我是来充数的！我是来充数的！我是来充数的！我是来充数的！我是来充数的！我是来充数的！</div>
+	</div>
+	<h2 style="color: red;">鼠标移入上面的框</h2>
+	<h2>鼠标移入那个框，就会出来下面的框，如果点击不是这两个框的位置，下面的框就隐藏。</h2>
+	<h3>PS:这个代码，你先在浏览器打开看下效果，然后不清楚了，直接度娘一下关键词，基本就出来了，再不懂，可以追问！</h3>
+	<i class="iconfont icon-icon_play_"></i><i class="fa fa-heart-o" aria-hidden="true">vv</i>
+</body>
+</html>

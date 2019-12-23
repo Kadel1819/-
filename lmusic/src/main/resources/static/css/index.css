@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/*页头部分css代码*/
+.footer_head {
+	padding-top: 0px; /*下移动15,左移动150px;*/
+	margin-left: 80px;
+	margin-right: 10px;
+	margin-top: -20px;
+}
+
+/*主页有关位置的*/
+.footer_head_line {
+	list-style: none; /* 将默认的列表符号去掉 */
+	padding: 0; /* 将默认的内边距去掉 */
+	margin: 0; /* 将默认的外边距去掉 */
+	display: inline-block; /* 往左浮动 */
+}
+
+/*主页有关于字体的*/
+.footer_head_font {
+	font-size: 20px;
+	padding-top: 22px;
+	padding-left: 30px;
+	Font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+}
+/*主页页尾  */
+.btn-one {
+	font-size: 15px; /*字体大小  */
+	color: #99FFFF; /* 将颜色设置成白色的 */
+	background-color: black; /* 背景颜色 */
+}
+/* li标签 */
+li {
+	list-style: none; /* 将所有li标签默认的列表符号去掉 */
+}
+/* 主页超链接 */
+.p-one {
+	color: white; /* 将颜色设置成白色的 */
+	text-decoration: none; /* 下划线 */
+	text-decoration: blink;
+}
+/*主页头超连接*/
+.bth-aone {
+	color: white;
+}
+/* 轮播图页头文字 */
+.bth-aone-header {
+	color: #555555;
+}
+
+.bth-aone-header:hover {
+	margin-top: -3px;
+	color: #000000;
+	text-decoration: none;
+}
+/* 主页页底超链接效果 */
+.bth-aone:hover {
+	font-size: 17px;
+	margin-top: -3px;
+	color: #00FFFF;
+	text-decoration: none;
+}
+/*轮播图css代码*/
+.imgBox {
+	margin: 0 auto;
+	margin-top: -30px;
+}
+
+.imgBox img {
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.img1 {
+	display: block;
+}
+
+.img2 {
+	display: none; /* 隐藏 */
+}
+
+.img3 {
+	display: none; /* 隐藏 */
+}
+
+.img-slide {
+	width: 1262px;
+	padding: 0 auto;
+}
+
+.bth-bbb {
+	margin-left: 20px;
+}
+/*页头样式*/
+.bth-header-a:visited {
+	color: black;
+}
+
+.bth-header-a:hover {
+	color: #00DDDD;
+	text-decoration: none;
+}
+/*推荐歌单*/
+.div-row-c2 {
+	margin: 0 auto; padding 0 auto;
+	margin-top: 20px; /* 整体向下移动20px */
+	/* border: 1px solid red;边框线以及颜色 */
+	width: 100%;;
+	overflow: hidden; /* 超出隐藏 */
+}
+
+.div-row-c2>img {
+	width: 100%; /* 图片的宽 */
+}
+/* 歌单行头 */
+.bin-li {
+	margin-left: 10px;
+}
+/*排行榜*/
+.div-row-c3 {
+	margin: 0 auto; padding 0 auto;
+	margin-top: 20px; /* 整体向下移动20px */
+	/* border: 1px solid red;边框线以及颜色 */
+	width: 100%;
+	height: 125px;
+	overflow: hidden; /* 超出隐藏 */
+	background-repeat: no-repeat; /* 图片不重复 */
+	text-align: center;
+}
+
+.img-background {
+	width: 100px; /*  */
+	padding-top: 30px;
+}
+/* 排行榜歌名div */
+.div-nei1 {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 100%;
+	height: 300px;
+	border: 1px solid #AFEEEE;
+}
+
+.div-nei2 {
+	margin: 20px; /* 外边距 */
+	padding: 0 auto;
+}
+
+.div-nei3 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+/* 去掉下划线 改颜色 */
+.div-nei3>span a {
+	text-decoration: none;
+	color: #777777;
+}
+
+.div-nei3>span a:hover {
+	Font-family: cursive;
+	color: #000000;
+}
+/* 精选活动 */
+.div-jin1>img {
+	width: 100%; /* 将宽度设置为div比例 */
+}
+/*推荐歌手*/
+#section-ge>div>div>div {
+	 height: 250px;
+}
+/* 歌手头像img样式 */
+#section-ge>div>div img {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 166px;
+	border-radius: 100px; /* 圆角 */
+}
+/* 歌手头像div样式 */
+#section-ge>div>div>div>div {
+	margin-top: 15px;
+	/* border: 1px solid red; */
+	text-align: center; /* 文字居中 */
+}
+/* ------分页---- */
+.paging-nav>div {
+	height: 42px;
+}
+/* 分页内div */
+.paging-n>div {
+	width: 42px; /* 宽度 */
+	height: 42px; /* 高度 */
+	margin-right: 10px;
+	float: left; /*让两个div能在一行  */
+}
+/* 分页去掉标签自带的下划线  */
+.paging-n>div a {
+	font-size: 15px; /* 字体大小 */
+	color: #555555; /* 字体颜色 */
+	text-decoration: none; /* 去掉标签自带的下划线 */
+}
+/* 分页水平居中,垂直居中 */
+.paging-n p {
+	text-align: center; /*水平居中*/
+	margin-top: 10px;/* 垂直居中 */
+}

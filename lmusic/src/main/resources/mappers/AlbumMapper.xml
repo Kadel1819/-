@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.kuwo.lmusic.mapper.AlbumMapper">
+	<resultMap type="com.kuwo.lmusic.entity.Album" id="AlbumEntity">
+		<id column="aid" property="aid"/>
+		<result column="is_delete" property="isDelete"/>
+		<result column="created_user" property="createUser"/>
+		<result column="created_time" property="createdTime"/>
+		<result column="modified_user" property="modifiedUser"/>
+		<result column="modified_time" property="modifiedTime"/>
+	</resultMap>
+	<insert id="insertAlbum">
+		insert into m_album(
+			sid,name,
+			avatar,is_delete,
+			created_user,created_time,
+			modified_user,modified_time
+		)values(
+			#{sid},#{name},
+			#{avatar},#{isDelete},
+			#{createUser},#{createdTime},
+			#{modifiedUser},#{modifiedTime}
+		);
+	</insert>
+	<select id="findByNameAndSid" resultMap="AlbumEntity">
+		select
+			* 
+		from 
+			m_album
+		where 
+			name=#{name}
+		and
+			sid=#{sid}
+	</select>
+</mapper>

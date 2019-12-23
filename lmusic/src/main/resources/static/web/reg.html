@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<!--edge浏览器H5兼容设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--360浏览器H5兼容设置-->
+		<meta name="renderer" content="webkit" />
+		<title>Imusic</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--导入核心文件-->
+		<script src="../bootstrap3/js/holder.js"></script>
+		<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../bootstrap3/js/bootstrap.js"></script>
+<title>注册</title><style type="text/css">
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+    background: url("../images/timg.jpg") no-repeat center;
+    /*设置图片适应整个页面*/
+    background-attachment:fixed;
+     overflow: hidden;
+     background-color: #AAAAAA;
+    
+}
+
+.reg_back {
+    /*设置整体的尺寸、背景色、边距等*/
+    width: 850px;
+    height: 400px;
+    padding-left:650px;
+    margin: auto;
+    margin-top: 250px;
+    
+}
+
+.reg_left {
+    /*设置左浮动和外边距*/
+    float: left;
+    margin: 10px;
+}
+
+.reg_left > p:first-child {
+    /*设置段落（新用户注册）颜色和字体大小*/
+    color: #FFFAFA;
+    font-size: 20px;
+}
+
+.reg_left > p:last-child {
+    /*设置段落（USER REGISTER）颜色和字体大小*/
+    color: #A6A6A6;
+    font-size: 20px;
+}
+
+.reg_center {
+    /*设置中间的各种输入框等*/
+    float: left;
+    width: 450px;
+    
+}
+
+.reg_right {
+    /*设置右边段落浮动和外间距*/
+    float: right;
+    margin: 30px;
+    transform:translateY(-150%);
+}
+
+.reg_right > p:first-child {
+    font-size: 15px;
+}
+
+.reg_right p a {
+    /*设置超链接（立即登录）颜色*/
+    color: crimson;
+}
+
+.td_left {
+    /*设置表单中字体对齐方式和宽度、高度*/
+    width: 100px;
+    text-align: right;
+    height: 40px;
+}
+
+.td_right {
+    /*设置输入框内边距*/
+    padding-left: 40px;
+}
+
+#username ,#password,#Email, #rename ,#Telphone,#Birthday,#checkcode{
+    /*设置输入框大小和边框*/
+    width: 200px;
+    height: 30px;
+    border: 1px solid #A4A4A4;
+    /* 设置边框为圆角 */
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#checkcode{
+    /*验证码宽度*/
+    width: 100px;
+}
+
+#btn_sub{
+    /*注册按钮*/
+    background: lime;
+    width: 60px;
+    height: 40px;
+    border: 1px solid lime ;
+    border-radius: 8px;
+    padding-left: 0px;
+}
+</style>
+</head>
+<body>
+ 
+ <div class="reg_back">
+        <div class="reg_left">
+            <p>新用户注册</p>
+        </div>
+        <div class="reg_center">
+            <div class="reg_form">
+                <form id="bth-form" action="RegServlet" method="get">
+                    <table>
+                        <tr>
+                            <td class="td_left"><label for="username">用户名</label></td>
+                            <td class="td_right"><input type="text" name="username" placeholder="请输入用户名"
+                                                        id="username"><span><small id="d1"></small></span></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="password">密码</label></td>
+                            <td class="td_right"><input type="password" name="password" placeholder="请输入密码"
+                                                        id="password" ><span><small class="c1" id="d2"></small></span></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="Email">Email</label></td>
+                            <td class="td_right"><input  type="email" name="email" placeholder="请输入Email" 
+                                                        id="Email"><span><small class="c1" id="d3"></small></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="rename">姓名</label></td>
+                            <td class="td_right"><input type="text" name="rename" placeholder="请输入真实姓名" 
+                                                        id="rename"><span><small class="c1" id="d4"></small></span>
+                            </td>
+                        </tr>
+                       <tr>
+                            <td colspan="2" align="center"><input type="button" value="注册" id="btn_sub"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+
+$("input").click(function(){
+	if($("input").val()==""){
+		$("#d1").text("请输入用户名");
+		$("#d2").text("请输入密码")
+		$("#d3").text("请输入邮箱")
+		$("#d4").text("请输入姓名")
+	}else{
+		$("#d1").text("");
+		
+	}	
+});
+	$("input").keyup(function(){
+		if($("#username").val().length<3){
+			$("#d1").text("请输入3个字以上");
+		}else{
+			$("#d1").text("");
+			
+		}	
+	});
+	$("input").keyup(function(){
+		if($("#password").val().length<6){
+			$("#d2").text("请输入6个数字")
+		}else{
+			$("#d2").text("");
+		}
+	});
+	$("#rename").click(function(){
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if($("#Email").val()==""){
+			$("#d3").text("邮箱不能为空")
+		}else if(filter.test($("#Email").val())){
+			$("#d3").text("");
+		}else{
+			$("#d3").text("邮箱格式有误!")
+		}
+		
+	});
+	$("input").keyup(function(){
+		if($("#rename").val().length<2){
+			$("#d4").text("请输入正确名字")
+		}else{
+			$("#d4").text("");
+		}
+	}); 
+	
+	/*判断用户的用户名是否被占用*/
+		$("#password").click(function(){
+			console.log($("#username").val())		
+			var username=$("#username").val()
+			$.ajax({
+			"url":"/users/th",
+			"data":{"username":username},
+			"type":"post",
+			"dataType":"json",
+			"success":function(result){
+				if(result.state == 2000){
+					$("#d1").text("");//如果用户名已经被占用的话就提示出来
+				}else{
+					$("#d1").css({"color":"red"});/* 改颜色 */
+					$("#d1").text("该用户名已占用");//如果密码没被占用就不显示
+				}
+			 },
+			 "error":function(xhr){
+			 		alert("未知错误,请联系客服或管理员:" + xhr.status);
+			 }
+		});
+   	});
+	/* 用户注册 */
+	$("#btn_sub").click(function(){
+			$.ajax({
+			"url":"/users/reg",
+			"data":$('#bth-form').serialize(),//获取form表单的提交的数据封装到data中
+			"type":"post",
+			"dataType":"json",
+			"success":function(result){
+				if(result.state == 2000){
+					alert("注册成功!!!");
+					location.href="login.html";/* 如果注册成功就跳转登录页面 */
+				}else{
+					alert("注册失败:" + result.message);
+				}
+			 },
+		}); 
+		
+   	});
+</script>
+</body>
+<script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+
+
+

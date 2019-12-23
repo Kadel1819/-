@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>kuwo.song</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css"
+	href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<link rel="stylesheet" type="text/css" href="../css/song.css" />
+<style type="text/css">
+/* 	#input{
+		width:500px;
+		height:50px;
+	} */
+#input_one {
+	width: 300px;
+	outline: green; /* 点击的时候边框的颜色 */
+	font-style: normal; /* 字体 */
+	/* border: none;/* 去掉默认的边框 */ */
+	border-radius: 5px; /* 圆角 */
+	padding-left: 10px; /* 将光标稍稍往右移动 */
+	/* background-color: #E0FFFF; */
+}
+/*手机 */
+@media ( max-width : 768px) {
+	.img-slide {
+		width: 948px;
+	}
+}
+/*平板设备 */
+@media ( min-width : 768px) and (max-width: 992px) {
+	.img-slide {
+		width: 948px;
+	}
+}
+/*普通电脑屏幕 */
+@media ( min-width : 992px) and (max-width: 1200px) {
+	.img-slide {
+		width: 948px;
+	}
+}
+/*高分辨率设备*/
+@media ( min-width : 1200px) {
+}
+
+/**/
+#diy-header {
+	width: 80px;
+	height: 60px;
+	position: absolute; /*子元素绝对定位*/
+	background-color: #F0F0F0;
+	display: none;
+}
+
+body {
+	background-color: #FFFAFA;
+}
+</style>
+</head>
+<body>
+	<!-- 页头start -->
+	<!--   <input id="input"style="outline: none;" >输入框去蓝边框  -->
+	<footer style="height: 51px; white-space: nowrap;">
+		<div>
+			<ul>
+				<li class="footer_head_line"><img id="footer_img"
+					class="footer_head" style="width: 150px;"
+					src="../images/index/dac7499.png"></li>
+				<li class="footer_head_line footer_head_font"><a href="#"
+					class="bth-header-a">发现音乐</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#"
+					class="bth-header-a">下载客户端</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#"
+					class="bth-header-a">音乐现场</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#"
+					class="bth-header-a">VIP会员</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#"
+					class="bth-header-a">更多</a></li>
+				<li class="footer_head_line footer_head_font"><input
+					style="height: 30px" id="input_one" type="text" name="seach"
+					placeholder="搜索音乐/歌单/歌手"></li>
+				<li class="footer_head_line" style="padding-left: 120px;"><img
+					id="img-header" style="width: 40px; border-radius: 100px;"
+					src="../images/index/singer-header05.jpg">
+					<div id="diy-header">
+						<div>
+							<p>
+								<a style="padding-left: 8px; margin: 0 auto;" href="#">登录</a>
+							</p>
+							<p>
+								<a style="padding-left: 8px; margin: 0 auto;" href="#">退出</a>
+							</p>
+						</div>
+					</div></li>
+			</ul>
+		</div>
+	</footer>
+	<hr>
+	<!-- 页头over -->
+	<!--上传歌曲start  -->
+	<section>
+		<form id="from-change-avatar" action="/users/change_avatar"
+			method="post" enctype="multipart/form-data" class="form-horizontal"
+			role="form">
+			<div class="form-group">
+				<label  class="col-md-2 control-label">音乐文件:</label>
+				<div class="col-md-1">
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-md-offset-2 col-md-4">
+					<input class="btn btn-primary" style="width: 700px;background-color:aqua;" type="file" name="file">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input style="width: 700px;background-color:#ffe443" id="btn-change-avatar" type="button" class="btn btn-primary"
+						value="上传" />
+				</div>
+			</div>
+		</form>
+	</section>
+	<!-- end -->
+	<section
+		style="background-color: #444444; height: 160px; margin-top: 20px;">
+		<!--上半部分  -->
+		<div class="btn-one">
+			<!--联系我们、下载客户端等-->
+			<div class="font-size:10px;">
+				<div class="col-md-offset-1 col-md-2">
+					<img
+						style="width: 100px; border-radius: 5px; margin-top: 20px; margin-left: 80px;"
+						alt="" src="../images/index/Administrator WeChat.jpg">
+				</div>
+				<div class="col-md-6 text-center" style="margin-top: 20px;">
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>用户帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">新手指南</a></li>
+							<li><a href="#" class="p-one bth-aone">服务保障</a></li>
+							<li><a href="#" class="p-one bth-aone">常见问题</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>商家帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">商家入驻</a></li>
+							<li><a href="#" class="p-one bth-aone">商家后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>关于我们</p></a></li>
+							<li><a href="#" class="p-one bth-aone">关于橘子</a></li>
+							<li><a href="#" class="p-one bth-aone">联系我们</a></li>
+							<li><span class="fa fa-wechat" style="color: #00DD00;"></span>
+								<span class="fa fa-weibo" style="color: #FFAA33"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+			<!-- 页面底部-备案号 #footer -->
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2020 JuZi.cn All Rights Reserved 莞ICP备08000853号-56 <a
+					target="_blank" href="http://www.tedu.cn/" class="bth-aone">橘子科技集团有限公司</a>
+				版权所有
+			</div>
+		</div>
+		<!--下半部分  -->
+	</section>
+	<!-- 页尾over -->
+	<script src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		/* 头像事件 */
+		$("#img-header").mouseover(function() {
+			$("#diy-header").css({
+				"display" : "block"
+			});
+		});
+		$("#diy-header").click(function() {
+			$("#diy-header").css({
+				"display" : "none"
+			});
+		});
+		/* 按钮start */
+		$(".div-radius-buttom>div").click(function() {
+			$(this).css({
+				"background-color" : "#ffe443"
+			});/* 颜色 */
+			$(this).siblings().css("background-color", "#f2f2f2");
+		});
+		/* 按钮end */
+		/* 分页jq代码 */
+		var div;
+		$(".paging-n>div").click(function() {
+			div = $(this).css({
+				"background-color" : "#ffe443"
+			});/* 颜色 */
+			$(this).siblings().css("background-color", "#FFFAFA");
+		});
+		$(".paging-n>div").mouseover(function() {
+			$(this).css({
+				"background-color" : "#ffe443"
+			});/* 颜色 */
+			$(this).siblings().css("background-color", "#FFFAFA");
+			$(div).css({
+				"background-color" : "#ffe443"
+			});/* 颜色 */
+		});
+		$(".paging-n>div").mouseout(function() {
+			$(this).css({
+				"background-color" : "#FFFFE0"
+			});
+			$(div).css({
+				"background-color" : "#ffe443"
+			});/* 颜色 */
+		});
+	</script>
+</body>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript"
+	src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification"
+  content="u3zgb6LsI6kUmkdXWusM0nIXbDCn-lucENrCR8cCGwg">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="fragment" content="!">
+<link href="../../favicon.ico" rel="icon">
+<title data-bind="text: projectTitle">举报问题</title>
+<style type="text/css">
+body {
+	align: center;
+}
+</style>
+
+<meta name="robots" content="index, follow, noodp, noydir">
+<!-- Bootstrap core CSS -->
+<!-- Custom styles for this template -->
+<link href="/Content/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/Content/jumbotron.css" rel="stylesheet">
+<script src="/Apex/Config" type="text/javascript"></script>
+<link
+  href="http://help.bing.microsoft.com//Resources/content/styles/apex.core.min.css?v=16001231040000"
+  rel="stylesheet">
+<link href="/Resources/content/styles/apex.icon.css" rel="stylesheet">
+<script
+  src="https://www.microsoft.com/videoplayer/js/oneplayeriframe.js"
+  type="text/javascript"></script>
+<link
+  href="http://help.bing.microsoft.com/Resources/content/styles/apex.bing.css"
+  rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- CONTENT SECTION -->
+  <div class="AllContentContainer" align="center">
+
+    <div
+      data-bind="if: (relatedTopicsItem() &amp;&amp; navGroupsItem())"></div>
+    <div
+      data-bind="if: (!relatedTopicsItem() &amp;&amp; !navGroupsItem() &amp;&amp; topicData() &amp;&amp; !errorTopic())"></div>
+    <div data-bind="if: navGroupsItem"></div>
+    <div data-bind="if: errorTopic"></div>
+    <div class="row">
+      <div data-bind="if: showRelatedTopicsRight()">
+        <div data-bind="if: !showRightRail()"></div>
+        <div class="col-sm-8 blog-main" data-bind="if: showRightRail()">
+          <div data-bind="if: !errorTopic()">
+            <div id="railContent" data-bind="html: topicData">
+              <div id="cntnt" type="" xmlns:usr="urn:the-xml-files:xslt"
+                xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+                <h1>举报问题</h1>
+                <h4 style="display: none;">举报问题</h4>
+                <font class="keywords" id="id_topicSummary" lock="">有关如何举报不良结果、知识产权问题或有关网站内容的其他问题的信息。</font>
+                <p>
+                  如果你对于搜索结果中包含的特定 URL 或其他信息有任何问题，请<a href="report2.html"
+                    target="_blank">向必应举报</a>。举报问题不一定会促使我们将某个 URL
+                  从搜索结果中删除。必应仅在非常有限的情况下才会删除搜索结果，以免限制必应用户对相关信息的访问。
+                </p>
+                <div class="MORE_INFO_ICON_NOTE">
+                  <h5>注释</h5>
+                  <p>
+                    必应不控制网站发布的或在必应搜索结果中显示的内容。为了确保已从搜索结果中删除内容，你最好选择与发布该内容的网站的网站管理员联系，申请将内容删除。即使必应从搜索结果中删除了该
+                    URL，在网站管理员从网站删除违规内容之前，该 URL 会继续存在并可以通过 Web 地址直接访问。</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

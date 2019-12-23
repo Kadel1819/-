@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>kuwo.io</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--360浏览器H5兼容设置-->
+<meta name="renderer" content="webkit" />
+<title>Imusic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--导入核心文件-->
+<script src="../bootstrap3/js/holder.js"></script>
+<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+<script src="../bootstrap3/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<style type="text/css">
+/* 	#input{  
+		width:500px;
+		height:50px;
+	} */
+	#input_one{
+		width:300px;
+		outline: green;/* 点击的时候边框的颜色 */
+		font-style: normal;/* 字体 */
+		/* border: none;/* 去掉默认的边框 */ */
+		border-radius: 5px;/* 圆角 */
+		padding-left:10px;/* 将光标稍稍往右移动 */
+		/* background-color: #E0FFFF; */
+	}
+		/*手机 */
+	@media (max-width: 768px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*平板设备 */
+	@media (min-width: 768px) and (max-width: 992px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*普通电脑屏幕 */
+	@media (min-width: 992px) and (max-width: 1200px) {
+		.img-slide{
+			width: 948px;
+		}		
+	}
+	/*高分辨率设备*/
+	@media (min-width: 1200px) {
+		
+	}
+	
+	/**/
+	#diy-header {
+		width: 80px;
+		height: 60px;
+		position: absolute; /*子元素绝对定位*/
+		background-color: #F0F0F0;
+		display: none;
+	}
+	body{
+		background-color: #FFFAFA;
+	}
+</style>
+</head>
+<body>
+  <!-- 页头start -->
+<!--   <input id="input"style="outline: none;" >输入框去蓝边框  -->
+	<footer style="height: 51px;white-space:nowrap;background-color: ;">
+		<div>
+			<ul>
+				<li class="footer_head_line"><img id="footer_img" class="footer_head" style="width: 150px;"  src="../images/index/dac7499.png"></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">发现音乐</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">下载客户端</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">音乐现场</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">VIP会员</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">更多</a></li>
+				<li class="footer_head_line footer_head_font">
+					<input style="height:30px" id="input_one" type="text" name="seach" placeholder="搜索音乐/歌单/歌手">
+				</li>
+				<li class="footer_head_line" style="padding-left: 120px;">
+					<img id="img-header" style="width: 40px;border-radius: 100px;" src="../images/index/singer-header05.jpg">
+					<div id="diy-header">
+						<div>
+							<p><a style="padding-left: 8px;margin: 0 auto;" href="login.html">登录</a></p>
+							<p onclick="exit()" style="padding-left: 8px;margin: 0 auto;"><a>退出</a></p>
+							<p style="padding-left: 8px;margin: 0 auto;margin: 0 auto;"><a>更换头像</a></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<hr>
+  <!-- 页头over -->
+  <!-- 推荐/排行榜/歌单start -->
+  <nav>
+  	<ul style="padding-left: 300px;color: #33CCFF;Font-family: inherit;font-size: 15px;">
+  		<li class="footer_head_line"><a class="bth-aone-header" href="index.html"><b>推荐</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="rankinglist.html"><b class="bth-bbb">排行榜</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="singer.html"><b class="bth-bbb">歌手</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="songlist.html"><b class="bth-bbb">歌单</b></a></li>
+  	</ul>
+  </nav>
+  <div style="margin: 0 auto;padding: 0 auto;height: 5px;"></div>
+  <!-- 推荐/排行榜/歌单end -->
+  <!--轮播图start -->
+  <nav>
+  	<div class="imgBox">
+    	<img class="img-slide img1" src="../images/index/slideshow2.jpg" alt="1">
+    	<img class="img-slide img2" src="../images/index/slideshow3.jpg" alt="2">
+    	<img class="img-slide img3" src="../images/index/slideshow4.jpg" alt="3">
+	</div >
+  </nav>
+  <!-- 轮播图end -->
+  <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  <!-- 中间部分start -->
+  <nav class="row">
+  	<div class="col-md-1"></div>
+	<div class="col-md-11" style="margin: 0 auto;padding 0 auto;">
+		<ul>
+			<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+				<a href="#" class="bth-header-a"><b>推荐歌单</b></a>
+				</h3></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">每日歌单</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">翻唱</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">网络</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">伤感</a></li>
+		</ul>
+	</div>  	
+  </nav>
+  <!--歌单  -->
+  <section>
+	  <div class="row">
+	  	<div class="col-md-1">
+	  		
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div class="div-row-c2">
+	  			<img alt="" src="../images/songlist/songlist01.jpg">
+	  		</div>
+	  		<div>
+	  			<h4><a class="bth-header-a" href="#">每日最新歌单</a>
+	  			</h4>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div class="div-row-c2">
+	  			<img alt="" src="../images/songlist/songlist02.jpg">
+	  		</div>
+	  		<div>
+	  			<h4><a class="bth-header-a" href="#">每日最新歌单</a>
+	  			</h4>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div class="div-row-c2">
+	  			<img alt="" src="../images/songlist/songlist03.jpg">
+	  		</div>
+	  		<div>
+	  			<h4><a class="bth-header-a" href="#">每日最新歌单</a>
+	  			</h4>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div class="div-row-c2">
+	  			<img alt="" src="../images/songlist/songlist04.jpg">
+	  		</div>
+	  		<div>
+	  			<h4><a class="bth-header-a" href="#">每日最新歌单</a>
+	  			</h4>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div class="div-row-c2">
+	  			<img alt="" src="../images/songlist/songlist05.jpg">
+	  		</div>
+	  		<div>
+	  			<h4><a class="bth-header-a" href="#">每日最新歌单</a>
+	  			</h4>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-1">
+	  		
+	  	</div>
+	  </div>
+  </section>
+  <!--歌单  -->
+  <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  <!-- 精选 -->
+    <nav class="row">
+  	<div class="col-md-1"></div>
+	<div class="col-md-11" style="margin: 0 auto;padding 0 auto;">
+		<ul>
+			<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+				<a href="#" class="bth-header-a"><b>精选活动</b></a>
+				</h3></li>
+		</ul>
+	</div>  	
+  </nav>
+  <section>
+  	<div class="row">
+  		<div class="col-md-1">
+  		</div>
+  		<div class="col-md-5">
+  			<div class="div-jin1">
+  				<img alt="" src="../images/ranking/selectedActivities01.jpg">
+  			</div>
+  		</div>
+  		<div class="col-md-5">
+  			<div class="div-jin1">	
+  				<img alt="" src="../images/ranking/selectedActivities02.jpg">
+  			</div>
+  		</div>
+  		<div class="col-md-1">
+  		</div>
+  	</div>
+  </section>
+  <!-- 精选 -->
+  <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  <!-- 排行榜 -->
+  <nav class="row">
+  	<div class="col-md-1"></div>
+	<div class="col-md-11" style="margin: 0 auto;padding 0 auto;">
+		<ul>
+			<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+				<a href="#" class="bth-header-a"><b>排行榜</b></a>
+				</h3></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">更多</a></li>
+		</ul>
+	</div>  	
+  </nav>
+  <section>
+	  <div class="row">
+	  	<div class="col-md-1">
+	  		
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div style="background-image: url('../images/ranking/img9.jpg');overflow:hidden;width:100%;" class="div-row-c3">
+	  			<img class="img-background" alt="" src="../images/ranking/ranking01.png">
+	  		</div>
+	  		<div class="div-nei1">
+				<div class="div-nei2">
+					<div class="div-nei3">
+						<span><b>1.<a href="#">
+							桥边姑娘
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>2.<a href="#">
+							酒醉的蝴蝶
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>3.<a href="#">
+							你的答案
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span>4.<b></b><a href="#">
+							一生与你擦肩而过
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>5.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>6.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>7.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>8.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+				</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div style="background-image: url('../images/ranking/img12.jpg');overflow:hidden;width: 100%" class="div-row-c3">
+	  			<img class="img-background" alt="" src="../images/ranking/ranking02.png">
+	  		</div>
+	  		<div class="div-nei1">
+				<div class="div-nei2">
+					<div class="div-nei3">
+						<span><b>1.<a href="#">
+							桥边姑娘
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>2.<a href="#">
+							酒醉的蝴蝶
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>3.<a href="#">
+							你的答案
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span>4.<b></b><a href="#">
+							一生与你擦肩而过
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>5.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>6.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>7.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>8.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+				</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div style="background-image: url('../images/ranking/img3.jpg');overflow:hidden;width: 100%" class="div-row-c3">
+	  			<img class="img-background" alt="" src="../images/ranking/ranking03.png">
+	  		</div>
+	  			<div class="div-nei1">
+					<div class="div-nei2">
+						<div class="div-nei3">
+							<span><b>1.<a href="#">
+								桥边姑娘
+							</a></b></span>
+						</div>
+						<div class="div-nei3">
+							<span><b>2.<a href="#">
+								酒醉的蝴蝶
+							</a></b></span>
+						</div>
+						<div class="div-nei3">
+							<span><b>3.<a href="#">
+								你的答案
+							</a></b></span>
+						</div>
+						<div class="div-nei3">
+							<span>4.<b></b><a href="#">
+								一生与你擦肩而过
+							</a></span>
+						</div>
+						<div class="div-nei3">
+							<span>5.<b></b><a href="#">
+								桥边姑娘
+							</a></span>
+						</div>
+						<div class="div-nei3">
+							<span>6.<b></b><a href="#">
+								桥边姑娘
+							</a></span>
+						</div>
+						<div class="div-nei3">
+							<span>7.<b></b><a href="#">
+								桥边姑娘
+							</a></span>
+						</div>
+						<div class="div-nei3">
+							<span>8.<b></b><a href="#">
+								桥边姑娘
+							</a></span>
+						</div>
+				</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div style="background-image: url('../images/ranking/img5.jpg');overflow:hidden;width: 100%" class="div-row-c3">
+	  			<img class="img-background" alt="" src="../images/ranking/ranking04.png">
+	  		</div>
+	  		<div class="div-nei1">
+	  			<div class="div-nei2">
+					<div class="div-nei3">
+						<span><b>1.<a href="#">
+							桥边姑娘
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>2.<a href="#">
+							酒醉的蝴蝶
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>3.<a href="#">
+							你的答案
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span>4.<b></b><a href="#">
+							一生与你擦肩而过
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>5.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>6.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>7.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>8.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+				</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<div style="background-image: url('../images/ranking/img7.jpg');overflow:hidden;width: 100%" class="div-row-c3">
+	  			<img class="img-background" alt="" src="../images/ranking/ranking05.png">
+	  		</div>
+	  		<div class="div-nei1">
+	  			<div class="div-nei2">
+					<div class="div-nei3">
+						<span><b>1.<a href="#">
+							桥边姑娘
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>2.<a href="#">
+							酒醉的蝴蝶
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span><b>3.<a href="#">
+							你的答案
+						</a></b></span>
+					</div>
+					<div class="div-nei3">
+						<span>4.<b></b><a href="#">
+							一生与你擦肩而过
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>5.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>6.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>7.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+					<div class="div-nei3">
+						<span>8.<b></b><a href="#">
+							桥边姑娘
+						</a></span>
+					</div>
+				</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-1">
+	  	</div>
+	  </div>
+  </section>
+  <!-- 排行榜end -->
+  <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  <!-- 推荐歌手start -->
+   <nav class="row">
+  	<div class="col-md-1"></div>
+	<div class="col-md-11" style="margin: 0 auto;padding 0 auto;">
+		<ul>
+			<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+				<a href="#" class="bth-header-a"><b>歌手推荐</b></a>
+				</h3></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">华语</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">欧美</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">日韩</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">组合</a></li>
+			<li class="footer_head_line"><a href="#" class="bth-header-a bin-li">更多</a></li>
+		</ul>
+	</div>  	
+  </nav>
+  <section id="section-ge">
+  	<div class="row">
+  		<nav class="col-md-1"></nav><!-- 空白 -->
+  		<div class="col-md-10">
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header01.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">周杰伦</a></b><br>12w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头1 -->
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header02.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">G.E.M.邓紫棋</a></b><br>50w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头2 -->
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header03.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">啊悠悠</a></b><br>60w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头3 -->
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header04.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">小阿枫</a></b><br>12w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头4 -->
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header05.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">崔伟立</a></b><br>30w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头5 -->
+	  		<div class="col-md-2">
+	  			<a href="#"><img alt="" src="../images/index/singer-header06.jpg"></a>
+	  			<div>
+	  				<span><b><a class="bth-aone-header" href="#">林俊杰</a></b><br>30w首歌曲</span>
+	  			</div>
+	  		</div><!-- 头5 -->
+	  	</div>
+  		<nav class="col-md-1"></nav><!-- 空白 -->
+  	</div>
+  </section>
+  <!-- 推荐歌手end -->
+  <!-- 中间部分end -->
+  <hr>
+		<nav class="row paging-nav">
+  				<div class="col-md-4"></div><!-- null -->
+  				<div class="col-md-4">
+  					<nav class="paging-n" style="margin-left: 22px;">
+  						<div><p><a>&lt;</a></p></div>
+  						<div style="background-color: #ffe443;"><p><a>1</a></p></div>
+  						<div><p><a>2</a></p></div>
+  						<div><p><a>3</a></p></div>
+  						<div><p><a>...</a></p></div>
+  						<div><p><a>225</a></p></div>
+  						<div><p><a>&gt;</a></p></div>
+  					</nav>
+  				</div>
+  				<div class="col-md-4"></div><!-- null -->
+  			</nav>
+  <!-- 页尾start -->
+  <section style="background-color: #444444;height: 160px;margin-top: 20px;">
+  	<!--上半部分  -->
+  	<div class="btn-one">
+			<!--联系我们、下载客户端等-->
+			<div class="font-size:10px;">
+				<div class="col-md-offset-1 col-md-2">
+					<img style="width: 100px;border-radius: 5px;margin-top: 20px;margin-left: 80px;" alt="" src="../images/index/Administrator WeChat.jpg">
+				</div>
+				<div class="col-md-6 text-center" style="margin-top: 20px;">
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>用户帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">新手指南</a></li>
+							<li><a href="#" class="p-one bth-aone">服务保障</a></li>
+							<li><a href="#" class="p-one bth-aone">常见问题</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>商家帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">商家入驻</a></li>
+							<li><a href="#" class="p-one bth-aone">商家后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>关于我们</p></a></li>
+							<li><a href="#" class="p-one bth-aone">关于橘子</a></li>
+							<li><a href="#" class="p-one bth-aone">联系我们</a></li>
+							<li>
+								<span class="fa fa-wechat" style="color: #00DD00;"></span>
+								<span class="fa fa-weibo" style="color:	#FFAA33"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+
+				</div>
+			</div>
+			<!-- 页面底部-备案号 #footer -->
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2020 JuZi.cn All Rights Reserved 莞ICP备08000853号-56 <a target="_blank" href="http://www.tedu.cn/" class="bth-aone">橘子科技集团有限公司</a> 版权所有
+			</div>
+  	</div>
+  	<!--下半部分  -->
+  </section>
+  <!-- 页尾over -->
+<script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(".img-slide").click(ChangeImg);
+    var index=0;
+    //改变图片
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,3000);
+    /* 头像事件 */
+    $("#img-header").mouseover(function(){
+    	$("#diy-header").css({"display":"block"});
+    });
+    $("#diy-header").click(function(){
+    	$("#diy-header").css({"display":"none"});
+    });
+    /* 显示用户头像start */
+    $(document).ready(function(){
+			//尝试获取存入的头像路径值
+			let cookieAvatar = $.cookie("avatar");
+ 			console.log("cookieAvatar"+cookieAvatar);
+ 			//尝试显示头像
+ 			if(cookieAvatar != null){
+ 				$("#img-header").attr("src",cookieAvatar);
+ 			}
+	});
+    /* 显示用户头像end */
+    
+    /* 分页jq代码 */
+    var div;
+    $(".paging-n>div").click(function(){
+    	div=$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    });
+    $(".paging-n>div").mouseover(function(){
+    	$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    $(".paging-n>div").mouseout(function(){
+    	$(this).css({"background-color":"#FFFAFA"});
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    /* 分页 */
+    /* 退出登录 */
+     function exit(){
+    	console.log('准备退出登录');
+    	$.ajax({
+			"url":"/users/exit",
+			"type":"get",
+			"dataType":"json",
+			"success":function(result){
+				if(result.state == 2000){
+					alert("退出登录成功!!!");
+					location.href="index.html";/* 如果注册成功就跳转登录页面 */
+				}
+			 },
+		});
+    }
+</script>
+</body>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

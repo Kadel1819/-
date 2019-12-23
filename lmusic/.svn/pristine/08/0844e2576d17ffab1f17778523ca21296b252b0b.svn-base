@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>kuwo.singercontent</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<link rel="stylesheet" type="text/css" href="../css/singercontent.css" />
+<style type="text/css">
+/* 	#input{
+		width:500px;
+		height:50px;
+	} */
+	#input_one{
+		width:300px;
+		outline: green;/* 点击的时候边框的颜色 */
+		font-style: normal;/* 字体 */
+		/* border: none;/* 去掉默认的边框 */ */
+		border-radius: 5px;/* 圆角 */
+		padding-left:10px;/* 将光标稍稍往右移动 */
+		/* background-color: #E0FFFF; */
+	}
+		/*手机 */
+	@media (max-width: 768px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*平板设备 */
+	@media (min-width: 768px) and (max-width: 992px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*普通电脑屏幕 */
+	@media (min-width: 992px) and (max-width: 1200px) {
+		.img-slide{
+			width: 948px;
+		}		
+	}
+	/*高分辨率设备*/
+	@media (min-width: 1200px) {
+		
+	}
+	
+	/**/
+	#diy-header {
+		width: 80px;
+		height: 60px;
+		position: absolute; /*子元素绝对定位*/
+		background-color: #F0F0F0;
+		display: none;
+	}
+	body{
+		background-color: #FFFAFA;
+	}
+</style>
+</head>
+<body>
+  <!-- 页头start -->
+<!--   <input id="input"style="outline: none;" >输入框去蓝边框  -->
+	<footer style="height: 51px;white-space:nowrap;">
+		<div>
+			<ul>
+				<li class="footer_head_line"><img id="footer_img" class="footer_head" style="width: 150px;"  src="../images/index/dac7499.png"></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">发现音乐</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">下载客户端</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">音乐现场</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">VIP会员</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">更多</a></li>
+				<li class="footer_head_line footer_head_font">
+					<input style="height:30px" id="input_one" type="text" name="seach" placeholder="搜索音乐/歌单/歌手">
+				</li>
+				<li class="footer_head_line" style="padding-left: 120px;">
+					<img id="img-header" style="width: 40px;border-radius: 100px;" src="../images/index/singer-header05.jpg">
+					<div id="diy-header">
+						<div>
+							<p><a style="padding-left: 8px;margin: 0 auto;" href="login.html">登录</a></p>
+							<p onclick="exit()" style="padding-left: 8px;margin: 0 auto;"><a>退出</a></p>
+							<p style="padding-left: 8px;margin: 0 auto;margin: 0 auto;"><a>更换头像</a></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<hr>
+  <!-- 页头over -->
+  <!-- 推荐/排行榜/歌单start -->
+  <nav>
+  	<ul style="padding-left: 300px;color: #33CCFF;Font-family: inherit;font-size: 15px;">
+  		<li class="footer_head_line"><a class="bth-aone-header" href="index.html"><b>推荐</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="rankinglist.html"><b class="bth-bbb">排行榜</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="singer.html"><b class="bth-bbb">歌手</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="#"><b class="bth-bbb">歌单</b></a></li>
+  	</ul>
+  </nav>
+  <div style="margin: 0 auto;padding: 0 auto;height: 5px;"></div>
+  <!-- 推荐/排行榜/歌单end -->
+  
+  <!-- 中间部分start -->
+  <section class="section-header">
+  	<nav class="section-nav-onwe row">
+  		<div class="col-md-1"></div>
+  		<div class="col-md-10 row">
+  			<div class="col-md-3">
+  				<img style="width: 230px;border-radius: 200px;margin-top: 35px;" alt="" src="../images/index/singer-header02.jpg">
+  			</div>
+  			<div class="col-md-9">
+  				<nav class="theleft">
+  					<div>
+  						<ul>
+							<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;">
+							<b>G.E.M邓紫棋</b>
+							</h3></li>
+						</ul>
+						<ul>
+							<li class="footer_head_line"><span style="padding: 0 auto;margin-left: -40px; ">
+							单曲:121
+							</span></li>
+							<li class="footer_head_line"><span style="padding: 0 auto;">
+							专辑:121
+							</span></li>
+							<li class="footer_head_line"><span style="padding: 0 auto;">
+							粉丝:121
+							</span></li>
+							<li class="footer_head_line"><span style="padding: 0 auto;">
+							国籍:中国
+							</span></li>
+						</ul>
+  					</div>
+  					<div class="div-radius-buttom"><!-- 3-->
+						<div style="width: 130px;background-color:#ffe443">
+							<p><a href="#"><b class="glyphicon glyphicon-play">播放全部</b></a></p>
+						</div>
+						<div>
+							<p><a href="#"><b class="glyphicon glyphicon-plus">关注</b></a></p>
+						</div>
+						<div>
+							<p><a href="#"><b class="glyphicon glyphicon-comment">评论</b></a></p>
+						</div>
+					</div>
+  				</nav>
+  			</div>
+  		</div>
+  		<div class="col-md-1"></div>
+  	</nav>
+  	<div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  	<nav class="row">
+  		<nav class="col-md-1"></nav><!--空  -->
+  		<div class="col-md-8" style="margin-left: -16px;">
+  			<div class="div-header-two">
+  			<!--标题start  -->
+  				<nav style="background-color: #FFFAFA;">
+  					<ul>
+						<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+						<a href="#" class="bth-header-a"><b>单曲</b></a>
+						</h3></li>
+						<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left:30px;color: ">
+						<a href="singersonglist.html" class="bth-header-a"><b>专辑</b></a>
+						</h3></li>
+					</ul>
+  				</nav>
+  			<!--标题end  -->
+  			<!-- 类别start -->
+  				<nav class="nav-div5" style="background-color: #FFF0F5;height: 52px;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px;margin-top:18px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>序号</b></span>
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><b>歌曲</b></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><b>歌手</b></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><b>专辑</b>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>时间</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  			<!-- 类别end -->
+  			 <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  			
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-one"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  				<nav class="nav-div5 nav-div-two" style="background-color: white;"> <!-- 排行榜 --> 
+  					<div style="float: left;width: 205px; /*让两个div能在一行  */">
+  						<span style="margin-left: 20px;"><b>1</b></span>
+  						<img style="width: 54px;margin-left: 80px;margin-top: 3px;" 
+  							alt="" src="../images/ranking/你的答案.jpg">
+  					</div><!-- 列：1 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a></span>
+  					</div><!-- 列：2 -->
+  					<div class="nav-div5-12 navone">
+  						<span><a href="#"><b>要不要买菜</b></a></span>
+  					</div><!-- 列：3 -->
+  					<div class="nav-div5-34 navone">
+  						<span><a href="#"><b>下山</b></a>
+  						</span>
+  					</div><!-- 列：4-->
+  					<div class="nav-div5-5 navone">
+  						<span><b>02:53</b></span>
+  					</div><!-- 列：5 -->
+  				</nav>
+  			</div>
+  		</div>
+  		<nav class="col-md-1"></nav><!-- 空 -->
+  	</nav>
+  </section>
+  <!-- 中间部分end --> 
+    <div style="margin: 0 auto;padding: 0 auto;height: 44px;"></div>
+	<nav class="row paging-nav" >
+  				<div class="col-md-4"></div><!-- null -->
+  				<div class="col-md-4">
+  					<nav class="paging-n" style="margin-left: 22px;">
+  						<div><p><a>&lt;</a></p></div>
+  						<div style="background-color: #ffe443;"><p><a>1</a></p></div>
+  						<div><p><a>2</a></p></div>
+  						<div><p><a>3</a></p></div>
+  						<div><p><a>...</a></p></div>
+  						<div><p><a>225</a></p></div>
+  						<div><p><a>&gt;</a></p></div>
+  					</nav>
+  				</div>
+  				<div class="col-md-4"></div><!-- null -->
+  			</nav>
+  <!-- 页尾start -->
+  <section style="background-color: #444444;height: 160px;margin-top: 20px;">
+  	<!--上半部分  -->
+  	<div class="btn-one">
+			<!--联系我们、下载客户端等-->
+			<div class="font-size:10px;">
+				<div class="col-md-offset-1 col-md-2">
+					<img style="width: 100px;border-radius: 5px;margin-top: 20px;margin-left: 80px;" alt="" src="../images/index/Administrator WeChat.jpg">
+				</div>
+				<div class="col-md-6 text-center" style="margin-top: 20px;">
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>用户帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">新手指南</a></li>
+							<li><a href="#" class="p-one bth-aone">服务保障</a></li>
+							<li><a href="#" class="p-one bth-aone">常见问题</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>商家帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">商家入驻</a></li>
+							<li><a href="#" class="p-one bth-aone">商家后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>关于我们</p></a></li>
+							<li><a href="#" class="p-one bth-aone">关于橘子</a></li>
+							<li><a href="#" class="p-one bth-aone">联系我们</a></li>
+							<li>
+								<span class="fa fa-wechat" style="color: #00DD00;"></span>
+								<span class="fa fa-weibo" style="color:	#FFAA33"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+
+				</div>
+			</div>
+			<!-- 页面底部-备案号 #footer -->
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2020 JuZi.cn All Rights Reserved 莞ICP备08000853号-56 <a target="_blank" href="http://www.tedu.cn/" class="bth-aone">橘子科技集团有限公司</a> 版权所有
+			</div>
+  	</div>
+  	<!--下半部分  -->
+  </section>
+  <!-- 页尾over -->
+<script src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+    /* 头像事件 */
+    $("#img-header").mouseover(function(){
+    	$("#diy-header").css({"display":"block"});
+    });
+    /* 左 */
+    $("#diy-header").click(function(){
+    	$("#diy-header").css({"display":"none"});
+    });
+    $(".div-img-a").mouseover(function() {
+    	$(this).css("background-color", "#F0F0F0");
+		$(this).siblings().css("background-color", "white");
+	});
+    /* 右边 */
+    $(".nav-div-one").mouseover(function() {
+    	$(this).css("background-color", "#66FFFF");
+	});
+    $(".nav-div-one").mouseout(function() {
+    	$(this).css("background-color", "#FFFAFA");
+	});
+    $(".nav-div-two").mouseover(function() {
+    	$(this).css("background-color", "#99FFFF");
+	});
+    $(".nav-div-two").mouseout(function() {
+    	$(this).css("background-color", "white");
+	});
+    /* 分页jq代码 */
+    var div;
+    $(".paging-n>div").click(function(){
+    	div=$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    });
+    $(".paging-n>div").mouseover(function(){
+    	$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    $(".paging-n>div").mouseout(function(){
+    	$(this).css({"background-color":"#FFFAFA"});
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    /* 分页 */
+     /* 按钮start */
+    $(".div-radius-buttom>div").click(function(){
+    	$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#f2f2f2");
+    });
+    /* 按钮end */
+    
+     /* 显示用户头像start */
+    $(document).ready(function(){
+			//尝试获取存入的头像路径值
+			let cookieAvatar = $.cookie("avatar");
+ 			console.log("cookieAvatar"+cookieAvatar);
+ 			//尝试显示头像
+ 			if(cookieAvatar != null){
+ 				$("#img-header").attr("src",cookieAvatar);
+ 			}
+		});
+    /* 退出登录 */
+     function exit(){
+    	console.log('准备退出登录');
+    	$.ajax({
+			"url":"/users/exit",
+			"type":"get",
+			"dataType":"json",
+			"success":function(result){
+				if(result.state == 2000){
+					alert("退出登录成功!!!");
+					location.href="index.html";/* 如果注册成功就跳转登录页面 */
+				}
+			 },
+		});
+    }
+</script>
+</body>
+<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+<script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

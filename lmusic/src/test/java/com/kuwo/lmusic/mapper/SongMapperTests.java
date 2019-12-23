@@ -1,0 +1,49 @@
+package com.kuwo.lmusic.mapper;
+import org.junit.Test;
+/**
+ * 用户持久层测试类
+ */
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.kuwo.lmusic.entity.Song;
+
+/**
+ * 歌曲测试类
+ * @author 李钦鹏
+ *
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class SongMapperTests {
+	@Autowired
+	private SongMapper mapper;
+	
+	/**
+	 * 查询当前用户的数据
+	 * @param username 用户名
+	 * @return 用户数据
+	 */
+	@Test
+	public void finyDataByUsername() {
+		Song song=new Song();
+		song.setSid(4);
+		song.setAvatar("adf");
+		song.setPath("asdf");
+		song.setLyric("adsf");
+		song.setType(2);
+		song.setMusicName("adsfasd‘");
+		
+		Integer rows=mapper.insertSong(song);
+		System.err.println(rows);
+	}
+	@Test
+	public void findByName() {
+		Song song=mapper.findByName("adsfas‘", 4);
+		System.err.println(song);
+	}
+
+
+}

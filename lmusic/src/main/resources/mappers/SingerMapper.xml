@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.kuwo.lmusic.mapper.SingerMapper">
+
+	<resultMap type="com.kuwo.lmusic.entity.Singer" id="SingerEntity">
+		<id column="sid" property="sid"/>
+		<result column="is_delete" property="isDelete"/>
+		<result column="created_user" property="createUser"/>
+		<result column="created_time" property="createdTime"/>
+		<result column="modified_user" property="modifiedUser"/>
+		<result column="modified_time" property="modifiedTime"/>
+	</resultMap>
+	<!--  
+		/**
+	 * 添加歌手
+	 * @param name 名字
+ 	 * @param gender 性别
+	 * @param age 年龄
+ 	 * @param avatar  头像文件名字
+	 * @param nationality 国籍
+	 * @param isDelete 状态
+	 * @return 执行条数
+	 */
+	-->
+	<insert id="insertSinger">
+		insert into m_singer(
+			name,age,
+			gender,avatar,
+			nationality,is_delete,
+			created_user,created_time,
+			modified_user,modified_time 
+		)values(
+			#{name},#{age},
+			#{gender},#{avatar},
+			#{nationality},#{isDelete},
+			#{createUser},#{createdTime},
+			#{modifiedUser},#{modifiedTime}
+		);
+	</insert>
+	<select id="findByName" resultMap="SingerEntity">
+		SELECT
+			* 
+		from 
+			m_singer 
+		where 
+			name=#{name}
+	</select>
+</mapper>

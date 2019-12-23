@@ -1,0 +1,89 @@
+/*歌单主页*/
+.section-song{
+	height: 600px;
+}
+
+/*图片大小*/
+.div-img,.div-img img{
+	width: 252px;/* 宽度 */
+	height: 252px;/* 高度 */
+}
+/* 下载该歌单div */
+.div-h3{
+	margin-top: 10px;/* 外边距 */
+	width: 252px;/* 宽度 */
+}
+/* 下载该歌单css */
+.div-download{
+	margin-left:25px;/* 左外边距 */
+	width: 202px;
+	height: 44px;
+	background-color: #ffe443;/* 背景颜色 */
+	border-radius: 40px;/* 圆角 */
+}
+.div-download>p{
+	padding-top: 12px;
+}
+/* 内字 */
+.div-download>p{
+	margin-top:13px;/* 垂直居中 */
+	text-align: center;/* 水平居中 */
+}
+/* 二维码div */
+.asdf{
+	margin-left:35px;/* 左外边距 */
+	width: 180px;
+	height: 44px;
+}
+/* 二维码 */
+.asdf>img{
+	margin-top:-250px;
+	width: 180px;
+}
+/* a标签 */
+a:hover,a {
+	text-decoration: none;
+	color: black;
+}
+/* 播放添加...按钮 */
+.div-radius-buttom>div{
+	height: 40px;/* 高度 */
+	width:100px;/* 宽度 */
+	margin-right:5px;/* 外右边距 */
+	display: inline-block;/* 浮动为一行 */
+	border-radius: 40px;/* 圆角 */
+	background-color: #f2f2f2;/* 背景颜色 */
+}
+/* 播放添加...按钮 */
+.div-radius-buttom>div>p{
+	margin-top:10px;/* 垂直居中 */
+	text-align: center;/* 水平居中 */
+}
+/*列表*/
+.nav-lie{
+	height: 70px;
+}
+/* 横向div */
+.nav-lie>div{
+	height: 70px;/* 高度 */
+	display: inline-block;/*浮动为一行  */
+}
+/*调横向div宽度*/
+.div-one,.div-four{/*1,4 div */
+	width: 80px;/* 宽度 */
+}
+.div-two,.div-three{/* 2,3 div*/
+	width: 380px;
+}
+/*div里面的span标签居中*/
+.div-one,.div-four span{
+	text-align: center;
+}
+/* 垂直居中 */
+.span-1{
+	margin-top: 25px;/* 垂直居中 */
+}
+/* 垂直居中 */
+.span-2{
+	margin-top:17px;/* 垂直居中 */
+}

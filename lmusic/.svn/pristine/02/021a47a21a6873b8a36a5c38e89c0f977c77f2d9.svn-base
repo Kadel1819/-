@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>report</title>
+<style type="text/css">
+.Content-Main {
+	max-width: 500px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 20px 30px 20px 30px;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 1px 1px 1px #FFF;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	color: #888;
+	background: #FFF;
+}
+
+.Content-Main h1 {
+	display: block;
+	padding: 0px 0px 10px 40px;
+	margin: -10px -30px 30px -30px;
+	font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid #DADADA;
+	color: #888;
+}
+
+.Content-Main h1>span {
+	display: block;
+	font-size: 11px;
+}
+
+.Content-Main label {
+	display: block;
+	margin: 0px 0px 5px;
+}
+
+.Content-Main label>span {
+	float: left;
+	width: 20%;
+	padding-right: 10px;
+	margin-top: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-align: right;
+	color: #333;
+}
+
+.Content-Main input[type="text"], .Content-Main textarea {
+	width: 70%;
+	height: 20px;
+	padding: 5px 0px 5px 5px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	line-height: 15px;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	color: #888;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.select1 {
+	width: 71%;
+	height: 35px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	line-height: 15px;
+	padding: 5px 0px 5px 5px;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	color: #888;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.select2 {
+	width: 13%;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	color: #888;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.Content-Main textarea {
+	width: 70%;
+	height: 100px;
+	padding: 5px 0px 0px 5px;
+}
+
+.button {
+	padding: 10px 25px 10px 25px;
+	margin-left: 111px;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	background: #FFF;
+	color: #333;
+}
+
+.button:hover {
+	color: #333;
+	background-color: #EBEBEB;
+	border-color: #ADADAD;
+}
+
+body {
+	background: url("re.jpg") no-repeat center;
+	/*设置图片适应整个页面*/
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+  <div class="Content-Main">
+    <div class="Content-Main1">
+      <h1>用户反馈</h1>
+    </div>
+    <form action="reflect2.html" method="post" class="form-report">
+      <label> <span>联系:</span> <select name="select2"
+        class="select2">
+          <option value="Email">微信</option>
+          <option value="Phone">电话</option>
+          <option value="QQ">QQ</option>
+      </select> <input type="text" placeholder="">
+      </label> <label> <span>有什么问题:</span> <textarea id="mesaage"
+          name="message" placeholder="你可以告诉我"></textarea>
+      </label> <label> <span>留言:</span> <textarea id="mesaage"
+          name="message" placeholder="你可以告诉我"></textarea>
+      </label> <label> <span>Subject:</span> <select name="select1"
+        class="select1" style="width: 100px;">
+          <option value="Job Inquiry">工作询问</option>
+          <option value="General Question">普遍的问题</option>
+      </select>
+      </label>
+      <div style="margin-left: 0px;">
+        <label><span>日 期:</span></label><input type="date">
+      </div>
+      <div style="margin-left: 0px; margin-top: 20px;">
+        <label><span>照片:</span></label><input type="file">
+      </div>
+
+
+
+      <div style="margin-left: 280px; margin-top: -140px;">
+        <img src="007.jpg" style="width: 250px; height: 250px;">
+      </div>
+      <div style="margin-top: -30px; margin-left: 100px;">
+        <input type="submit" class="button" value="提交"">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+—————————————————————————————————————
+版权声明：本文为WLT博主「qq_1969936122」的原创文章，遵循 CC 4.0 BY-SA 版权协议

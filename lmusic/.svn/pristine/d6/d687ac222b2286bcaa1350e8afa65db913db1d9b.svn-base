@@ -1,0 +1,50 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+#container{
+width: 350px;
+height: 500px;
+background-color: cornflowerblue;
+margin: auto;
+/* opacity:0.1; */
+}
+#player{
+  height: 100px;
+  width: 350px;
+  background-color: rgb(30, 108, 172);
+  
+}
+#player audio{
+  margin: 20px 20px 0px 20px;
+}
+#buttons{
+  width: 150px;
+  height: 20px;
+  margin-left: 80px;
+  display: inline-block;
+}
+#btpre{
+float: left;
+margin-right: 40px;
+}
+#next{
+  float: right;
+}
+#list ul{
+  text-align: center;
+  list-style-type: none;
+}
+#list li{
+  width: 350px;
+  height: 35px;
+  line-height: 35px;
+  border-bottom:1px solid white ;
+  cursor: pointer;
+}
+.play{
+  background-color: rgb(150, 177, 228) ;
+  color: white;
+  font-size: bold;
+}

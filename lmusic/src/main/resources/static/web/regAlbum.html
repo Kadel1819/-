@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<!--edge浏览器H5兼容设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--360浏览器H5兼容设置-->
+		<meta name="renderer" content="webkit" />
+		<title>添加专辑</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--导入核心文件-->
+		<script src="../bootstrap3/js/holder.js"></script>
+		<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../bootstrap3/js/bootstrap.js"></script>
+<title>歌手</title><style type="text/css">
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+    background: url("../images/timg.jpg") no-repeat center;
+    /*设置图片适应整个页面*/
+    background-attachment:fixed;
+     overflow: hidden;
+     background-color: #AAAAAA;
+    
+}
+
+.reg_back {
+    /*设置整体的尺寸、背景色、边距等*/
+    width: 850px;
+    height: 400px;
+    padding-left:650px;
+    margin: auto;
+    margin-top: 250px;
+    
+}
+
+.reg_left {
+    /*设置左浮动和外边距*/
+    float: left;
+    margin: 10px;
+}
+
+.reg_left > p:first-child {
+    /*设置段落（新用户注册）颜色和字体大小*/
+    color: black;
+    font-size: 20px;
+}
+
+.reg_left > p:last-child {
+    /*设置段落（USER REGISTER）颜色和字体大小*/
+    color: #A6A6A6;
+    font-size: 20px;
+}
+
+.reg_center {
+    /*设置中间的各种输入框等*/
+    float: left;
+    width: 450px;
+    
+}
+
+.reg_right {
+    /*设置右边段落浮动和外间距*/
+    float: right;
+    margin: 30px;
+    transform:translateY(-150%);
+}
+
+.reg_right > p:first-child {
+    font-size: 15px;
+}
+
+.reg_right p a {
+    /*设置超链接（立即登录）颜色*/
+    color: crimson;
+}
+
+.td_left {
+    /*设置表单中字体对齐方式和宽度、高度*/
+    width: 100px;
+    text-align: right;
+    height: 40px;
+}
+
+.td_right {
+    /*设置输入框内边距*/
+    padding-left: 40px;
+}
+
+#name ,#file,#Email, #nationality ,#gender,#Birthday,#checkcode,#age{
+    /*设置输入框大小和边框*/
+    width: 200px;
+    height: 30px;
+    border: 1px solid #A4A4A4;
+    /* 设置边框为圆角 */
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#checkcode{
+    /*验证码宽度*/
+    width: 100px;
+}
+
+#btn_sub{
+    /*注册按钮*/
+    background: lime;
+    width: 60px;
+    height: 40px;
+    border: 1px solid lime ;
+    border-radius: 8px;
+    padding-left: 0px;
+}
+</style>
+</head>
+<body>
+ 
+ <div class="reg_back">
+        <div class="reg_left">
+            <p style="color: #FFFAFA;">添加专辑</p>
+        </div>
+        <div class="reg_center">
+            <div class="reg_form">
+                <form id="bth-form" action="RegServlet" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td class="td_left"><label for="Email">专辑图片</label></td>
+                            <td class="td_right"><input style="background-color: white;" type="file" name="file" placeholder="请输入专辑头像文件" 
+                                                        id="file"><span><small class="c1" id="d3"></small></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="username">歌手名</label></td>
+                            <td class="td_right"><input type="text" name="sName" placeholder="请输入歌手名" value=""
+                                                        id="name"><span><small id="d1"></small></span></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="password">专辑名</label></td>
+                            <td class="td_right" ><input type="text" name="aName" placeholder="请输入专辑名" value=""
+                                                        id="gender" ><span><small class="c1" id="d2"></small></span></td>
+                        </tr>
+                       <tr>
+                            <td colspan="2" align="center"><input id="btn_sub" type="button" value="Add"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+	/* 添加歌手 */
+	$("#btn_sub").click(function(){
+		var formdate=new FormData();
+		formdate.append("file",$("#file")[0].files[0]);
+		formdate.append("uName",$("#name").val());
+		formdate.append("aName",$("#gender").val());
+		console.log($("#gender").val());
+		console.log($("#name").val());
+		$.ajax({
+			"url":"/Album/add",
+			"data":formdate,
+		 	"type":"post",
+		 	"processData":false,
+		 	"contentType":false,
+		 	"dataType":"json",
+		 	"success":function(result){
+		 		if(result.state == 2000){
+		 			alert("上传成功");
+		 		}else{
+		 			alert("上传失败" + result.message);
+		 		}
+		 	},
+		 	"error":function(xhr){
+		 		alert("你的登录信息已过期,请重新登录!\r\r状态码:" + xhr.status);
+		 	}
+		 });
+   	});
+</script>
+</body>
+
+</html>
+
+
+
+

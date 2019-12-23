@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>kuwo.song</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<link rel="stylesheet" type="text/css" href="../css/song.css" />
+<style type="text/css">
+/* 	#input{
+		width:500px;
+		height:50px;
+	} */
+	#input_one{
+		width:300px;
+		outline: green;/* 点击的时候边框的颜色 */
+		font-style: normal;/* 字体 */
+		/* border: none;/* 去掉默认的边框 */ */
+		border-radius: 5px;/* 圆角 */
+		padding-left:10px;/* 将光标稍稍往右移动 */
+		/* background-color: #E0FFFF; */
+	}
+		/*手机 */
+	@media (max-width: 768px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*平板设备 */
+	@media (min-width: 768px) and (max-width: 992px) {
+		.img-slide{
+			width: 948px;
+		}	
+	}
+	/*普通电脑屏幕 */
+	@media (min-width: 992px) and (max-width: 1200px) {
+		.img-slide{
+			width: 948px;
+		}		
+	}
+	/*高分辨率设备*/
+	@media (min-width: 1200px) {
+		
+	}
+	
+	/**/
+	#diy-header {
+		width: 80px;
+		height: 60px;
+		position: absolute; /*子元素绝对定位*/
+		background-color: #F0F0F0;
+		display: none;
+	}
+	body{
+		background-color: #FFFAFA;
+	}
+</style>
+</head>
+<body>
+  <!-- 页头start -->
+<!--   <input id="input"style="outline: none;" >输入框去蓝边框  -->
+	<footer style="height: 51px;white-space:nowrap;">
+		<div>
+			<ul>
+				<li class="footer_head_line"><img id="footer_img" class="footer_head" style="width: 150px;"  src="../images/index/dac7499.png"></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">发现音乐</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">下载客户端</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">音乐现场</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">VIP会员</a></li>
+				<li class="footer_head_line footer_head_font"><a href="#" class="bth-header-a">更多</a></li>
+				<li class="footer_head_line footer_head_font">
+					<input style="height:30px" id="input_one" type="text" name="seach" placeholder="搜索音乐/歌单/歌手">
+				</li>
+				<li class="footer_head_line" style="padding-left: 120px;">
+					<img id="img-header" style="width: 40px;border-radius: 100px;" src="../images/index/singer-header05.jpg">
+					<div id="diy-header">
+						<div>
+							<p><a style="padding-left: 8px;margin: 0 auto;" href="login.html">登录</a></p>
+							<p onclick="exit()" style="padding-left: 8px;margin: 0 auto;"><a>退出</a></p>
+							<p style="padding-left: 8px;margin: 0 auto;margin: 0 auto;"><a>更换头像</a></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<hr>
+  <!-- 页头over -->
+  <!-- 推荐/排行榜/歌单start -->
+  <nav>
+  	<ul style="padding-left: 300px;color: #33CCFF;Font-family: inherit;font-size: 15px;">
+  		<li class="footer_head_line"><a class="bth-aone-header" href="index.html"><b>推荐</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="rankinglist.html"><b class="bth-bbb">排行榜</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="singer.html"><b class="bth-bbb">歌手</b></a></li>
+  		<li class="footer_head_line"><a class="bth-aone-header" href="#"><b class="bth-bbb">歌单</b></a></li>
+  	</ul>
+  </nav>
+  <div style="margin: 0 auto;padding: 0 auto;height: 5px;"></div>
+  <!-- 中间部分start -->
+  <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+  <section class="section-song">
+	<nav class="row">
+		<nav class="col-md-1"></nav>
+		<div class="col-md-10">
+			<nav class="row">
+				<div class="col-md-3"><!-- 左 -->
+					<div class="div-img"><!-- 图片 -->
+						<img alt="" src="../images/songlist/songlist01.jpg">
+					</div>
+					<div style="margin: 0 auto;padding: 0 auto;height: 20px;"></div>
+					<div class="div-h3"><!-- 描述 -->
+						<h3><b>歌单简介</b></h3>
+						<p>2019年度热歌,这些歌曲可以运用到任何场景的BGM,随处都可以听到,传唱度很高。</p>
+					</div>
+					<div class="div-download">
+						<p><b class="glyphicon glyphicon-download-alt">下载该歌单</b></p>
+					</div>
+					<div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+					<div class="div-img"><!-- 图片 -->
+						<hr><!-- 下划线 -->
+					</div>
+					<!-- 二维码 -->
+					<div class="asdf">
+						<img alt="" src="../images/index/Administrator WeChat.jpg">
+					</div>
+				</div>
+				<div class="col-md-9"><!-- 右边 -->
+					<div><!--  1-->
+						<ul>
+						<li class="footer_head_line"><h3 style="padding: 0 auto;margin-left: -40px;color: ">
+						<a href="#" class="bth-header-a"><b>2019年度灵魂|2019年度20佳BGM出炉</b></a>
+							</h3></li>
+						</ul>
+					</div>
+					<div><!-- 2 -->
+						<p><img style="width: 32px;border-radius: 40px;/* 圆角 */" alt="" src="../images/index/singer-header02.jpg">
+							<span><a href="#">画船听雨眠</a></span>
+						</p>
+						<p>华语,抖音,流行</p>
+					</div>
+					<div class="div-radius-buttom"><!-- 3-->
+						<div style="width: 130px;background-color:#ffe443">
+							<p><a href="#"><b class="glyphicon glyphicon-play">播放全部</b></a></p>
+						</div>
+						<div>
+							<p><a href="#"><b class="glyphicon glyphicon-plus">添加</b></a></p>
+						</div>
+						<div>
+							<p><a href="#"><b class="glyphicon glyphicon-heart">收藏</b></a></p>
+						</div>
+						<div>
+							<p><a href="#"><b class="glyphicon glyphicon-comment">评论</b></a></p>
+						</div>
+					</div>
+					
+					<!-- 列表 -->
+					<!-- 列表头start -->
+					<div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+					<nav class="nav-lie"style="background-color: #FFF0F5;height: 52px;">
+						<div class="div-one">
+							<div class="span-2">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-2">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-2">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-2">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<!-- 列表头end -->
+					<!-- 列表头 -->
+					 <div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie one"style="background-color: #FFFAFA;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+					<nav class="nav-lie two"style="background-color: white;">
+						<div class="div-one">
+							<div class="span-1">
+								<span><a href="#"><b>1</b></a></span>
+							</div>
+						</div>
+						<div class="div-two">
+							<div class="span-1">
+								<span><a href="#"><b>蓝鲸</b></a></span>
+							</div>
+						</div>
+						<div class="div-three">
+							<div class="span-1">
+								<span><a href="#"><b>成恒</b></a></span>
+							</div>
+						</div>
+						<div class="div-four">
+							<div class="span-1">
+								<span><b>02:53</b></span>
+							</div>
+						</div>
+					</nav>
+				<div style="margin: 0 auto;padding: 0 auto;height: 30px;"></div><!-- null -->
+				</div>
+			</nav>
+		</div>
+		<nav class="col-md-1"></nav>
+	</nav>
+  </section>
+  <!-- 中间部分end -->
+ 
+		<nav class="row paging-nav">
+  				<div class="col-md-4"></div><!-- null -->
+  				<div class="col-md-4">
+  					<nav class="paging-n" style="margin-left: 22px;">
+  						<div><p><a>&lt;</a></p></div>
+  						<div style="background-color: #ffe443;"><p><a>1</a></p></div>
+  						<div><p><a>2</a></p></div>
+  						<div><p><a>3</a></p></div>
+  						<div><p><a>...</a></p></div>
+  						<div><p><a>225</a></p></div>
+  						<div><p><a>&gt;</a></p></div>
+  					</nav>
+  				</div>
+  				<div class="col-md-4"></div><!-- null -->
+  			</nav>
+  <!-- 页尾start -->
+  <section style="background-color: #444444;height: 160px;margin-top: 20px;">
+  	<!--上半部分  -->
+  	<div class="btn-one">
+			<!--联系我们、下载客户端等-->
+			<div class="font-size:10px;">
+				<div class="col-md-offset-1 col-md-2">
+					<img style="width: 100px;border-radius: 5px;margin-top: 20px;margin-left: 80px;" alt="" src="../images/index/Administrator WeChat.jpg">
+				</div>
+				<div class="col-md-6 text-center" style="margin-top: 20px;">
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>用户帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">新手指南</a></li>
+							<li><a href="#" class="p-one bth-aone">服务保障</a></li>
+							<li><a href="#" class="p-one bth-aone">常见问题</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>商家帮助</p></a></li>
+							<li><a href="#" class="p-one bth-aone">商家入驻</a></li>
+							<li><a href="#" class="p-one bth-aone">商家后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#" class="p-one bth-aone"><p>关于我们</p></a></li>
+							<li><a href="#" class="p-one bth-aone">关于橘子</a></li>
+							<li><a href="#" class="p-one bth-aone">联系我们</a></li>
+							<li>
+								<span class="fa fa-wechat" style="color: #00DD00;"></span>
+								<span class="fa fa-weibo" style="color:	#FFAA33"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+			<!-- 页面底部-备案号 #footer -->
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2020 JuZi.cn All Rights Reserved 莞ICP备08000853号-56 <a target="_blank" href="http://www.tedu.cn/" class="bth-aone">橘子科技集团有限公司</a> 版权所有
+			</div>
+  	</div>
+  	<!--下半部分  -->
+  </section>
+  <!-- 页尾over -->
+<script src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+ 
+    /* 头像事件 */
+    $("#img-header").mouseover(function(){
+    	$("#diy-header").css({"display":"block"});
+    });
+    $("#diy-header").click(function(){
+    	$("#diy-header").css({"display":"none"});
+    });
+    /* 按钮start */
+    $(".div-radius-buttom>div").click(function(){
+    	$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#f2f2f2");
+    });
+    /* 按钮end */
+    /* 分页jq代码 */
+    var div;
+    $(".paging-n>div").click(function(){
+    	div=$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    });
+    $(".paging-n>div").mouseover(function(){
+    	$(this).css({"background-color":"#ffe443"});/* 颜色 */
+    	$(this).siblings().css("background-color", "#FFFAFA");
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    $(".paging-n>div").mouseout(function(){
+    	$(this).css({"background-color":"#FFFFE0"});
+    	$(div).css({"background-color":"#ffe443"});/* 颜色 */
+    });
+    /* 分页 */
+       /* 右边 */
+    $(".one").mouseover(function() {
+    	$(this).css("background-color", "#66FFFF");
+	});
+    $(".one").mouseout(function() {
+    	$(this).css("background-color", "#FFFAFA");
+	});
+    $(".two").mouseover(function() {
+    	$(this).css("background-color", "#99FFFF");
+	});
+    $(".two").mouseout(function() {
+    	$(this).css("background-color", "white");
+	});
+    /* 显示用户头像start */
+    $(document).ready(function(){
+			//尝试获取存入的头像路径值
+			let cookieAvatar = $.cookie("avatar");
+ 			console.log("cookieAvatar"+cookieAvatar);
+ 			//尝试显示头像
+ 			if(cookieAvatar != null){
+ 				$("#img-header").attr("src",cookieAvatar);
+ 			}
+		});
+    /* 显示用户头像end */
+    /*  */
+    /* 退出登录 */
+     function exit(){
+    	console.log('准备退出登录');
+    	$.ajax({
+			"url":"/users/exit",
+			"type":"get",
+			"dataType":"json",
+			"success":function(result){
+				if(result.state == 2000){
+					alert("退出登录成功!!!");
+					location.href="index.html";/* 如果注册成功就跳转登录页面 */
+				}
+			 },
+		});
+    }
+</script>
+</body>
+<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+<script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

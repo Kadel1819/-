@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.kuwo.lmusic.mapper.SongMapper">
+	<resultMap type="com.kuwo.lmusic.entity.Song" id="SongEntity">
+		<id column="mid" property="mid"/>
+		<result column="music_name" property="musicName"/>
+		<result column="is_delete" property="isDelete"/>
+		<result column="created_user" property="createUser"/>
+		<result column="created_time" property="createdTime"/>
+		<result column="modified_user" property="modifiedUser"/>
+		<result column="modified_time" property="modifiedTime"/>
+	</resultMap>
+	<!-- 
+		/**
+	 * 添加歌曲
+	 * @param song 歌曲数据
+	 * @return 执行条数
+	 */
+	 -->
+	<insert id="insertSong">
+		insert into m_song(
+			sid,avatar,
+			music_name,path,
+			lyric,hits,
+			type,is_delete,
+			created_user,created_time,
+			modified_user,modified_time
+		)values(
+			#{sid},#{avatar},
+			#{musicName},#{path},
+			#{lyric},#{hits},
+			#{type},#{isDelete},
+			#{createUser},#{createdTime},
+			#{modifiedUser},#{modifiedTime}
+		);
+	</insert>
+	<!-- /**
+	 * 查询这首歌歌手是否已经上传
+	 * @param songName 歌曲名
+	 * @param sid	歌手id
+	 * @return
+	 */ -->
+	 <select id="findByName" resultMap="SongEntity">
+	 	select
+			* 
+		from 
+			m_song
+		where 
+			music_name=#{songName}
+		and
+			sid=#{sid}
+	 </select>
+</mapper>

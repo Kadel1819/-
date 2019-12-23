@@ -1,0 +1,30 @@
+/* 页头描述 */
+.section-nav-onwe{
+	height: 300px;
+	background-color: #EEEEEE;
+}
+/* 外div */
+.section-nav-onwe>div{
+	height: 300px;
+}
+.theleft{
+	height: 185px;
+	width: 611px;
+	margin-top: 60px;
+}
+/* 播放添加...按钮 */
+.div-radius-buttom>div{
+	height: 40px;/* 高度 */
+	width:100px;/* 宽度 */
+	margin-top:25px;
+	margin-right:5px;/* 外右边距 */
+	display: inline-block;/* 浮动为一行 */
+	border-radius: 40px;/* 圆角 */
+	background-color: #f2f2f2;/* 背景颜色 */
+}
+/* 播放添加...按钮 */
+.div-radius-buttom>div>p{
+	margin-top:10px;/* 垂直居中 */
+	text-align: center;/* 水平居中 */
+}
+

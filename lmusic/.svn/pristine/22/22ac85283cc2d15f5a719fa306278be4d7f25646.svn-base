@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>播放器练习</title>
+  <link rel="stylesheet" type="text/css" href="../css/demof.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="player">
+      <audio src="孙耀威 - 爱的故事(上集).flac" controls autoplay id="aud"></audio>
+      <div id="buttons">
+        <button id="btpre">上一首</button>
+        <button id="next">下一首</button>
+      </div>
+      <div id="list">
+        <ul>
+          <li class="play">洛天依 - 粉色少女.mp3</li>
+          <li>花香</li>
+          <li>这一生关于你的风景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+	window.onload = function () {
+		  var btnPre = document.getElementById('btpre');
+		  var btnNext = document.getElementById('next');
+		  var list = document.getElementById('list');
+		  var aud = document.getElementById('aud');
+		  var li = list.getElementsByTagName('li');
+		  var mymusic = ['../misic/洛天依 - 粉色少女.mp3', './music/花香.mp3', './music/这一生关于你的风景.mp3'];//把地址存在一个数组里
+		  //点击播放
+		  for (var i = 0; i < li.length; i++) {
+		    li[i].onclick = function () {
+		      for (var i = 0; i < li.length; i++) {
+		        if (this == li[i]) {
+		          li[i].className = 'play';
+		          aud.src = mymusic[i];
+		          aud.play();
+		        } else {
+		          li[i].className = '';
+	
+		        }
+		      }
+		    }
+		  }
+		  //获取正在播放的音乐
+		  function getPlay() {
+		    for (var r = 0; r < li.length; r++) {
+		      if (li[r].getAttribute('class') == 'play') {
+		        return r;
+	
+		      }
+		    }
+		  }
+		  //循环播放
+		  aud.onended = function () {
+		    var a = getPlay();
+		    a++;
+		    if (a > li.length - 1) {
+		      a = 0;
+		    }
+		    for (var j = 0; j < li.length; j++) {
+		      li[j].className = '';
+		    }
+		    aud.src = mymusic[a];
+		    aud.play();
+		    li[a].className = 'play';
+		  }
+		  //下一首
+		  btnNext.onclick = function () {
+		    var musicIndex = getPlay();
+		    if (musicIndex == li.length - 1) {//判断是否为最后一首，然后循环播放
+		      musicIndex = -1;
+		    }
+		    aud.src = mymusic[musicIndex + 1];//切换到下一首
+		    aud.play();
+		    for (var j = 0; j < li.length; ++j) {
+		      li[j].className = '';
+		    }
+		    li[musicIndex + 1].className = 'play';
+		  }
+		  //上一首
+		  btnPre.onclick = function () {
+		    var musicIndex = getPlay();
+		    if (musicIndex == 0) {//判断是否为第一首，然后循环播放
+		      musicIndex = li.length;
+		    }
+		    aud.src = mymusic[musicIndex - 1];//切换到上一首
+		    aud.play();
+		    for (var j = 0; j < li.length; ++j) {
+		      li[j].className = '';
+		    }
+		    li[musicIndex - 1].className = 'play';
+		  }
+		}
+</script>
+
+</body>
+
+</html>

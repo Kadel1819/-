@@ -1,0 +1,88 @@
+/*排行榜页面*/
+.section-header {
+	height: 1100px;
+}
+/* .section-header>nav>div{
+	border:1px solid red;
+	height: 300px;
+} */
+/*歌榜列*/
+.div-header-one {
+	margin: 0 auto; /* 清除默认边框 */
+	padding: 0 auto;
+	margin-left: -16px; /*左边向左移动16px;  */
+	margin-right: 16px; /*右边向左移动16px;  */
+	padding-top: 10px;
+	width: 228px;
+	height: 534px; /* 高度 */
+}
+/*歌榜列*/
+.div-header-two {
+	margin: 0 auto; /* 清除默认边框 */
+	padding: 0 auto;
+	margin-left: 16px; /*右边边向右移动16px;  */
+	margin-right: -16px; /*左边向右移动16px;  */
+	height: 1000px;
+}
+/*歌类型榜头位置*/
+.ul-li-b {
+	margin-left: 12px;
+}
+/*偏外边的div*/
+.div-img-a {
+	margin: 0 auto; /* 清除默认边框 */
+	padding: 0 auto; width : 165px; /* 宽度 */
+	height: 80px;
+	border: 1px solid white;/* 白色占位 */
+	width: 165px; /* 高度 */
+}
+
+.div-img-atwo {
+	height: 60px; /* 高度 */
+	width: 100%; /* 宽度 */
+	margin-top: 10px; /* 向下移动10px */
+}
+/* 排行榜图片 */
+.div-img-one {
+	width: 60px;
+	height: 60px;
+	float: left; /*让两个div能在一行  */
+}
+/* 排行榜大小 */
+.div-img-one>a>img {
+	width: 60px;
+	height: 60px;
+}
+
+/*排行榜图片右边的  */
+.div-span-one {
+	padding-top:10px;/* 整体向下移动10px */
+	text-align: center;/* 字水平居中 */
+	height: 60px;
+}
+/*<!-- <!-- 排行榜 --> -->  */
+/* 最外层 */
+.nav-div5{
+	height: 60px;
+}
+/* 2 */
+.nav-div5-12{
+	margin-top:18px;
+	width: 205px;
+	float: left; /*让两个div能在一行  */
+}
+/* 3，4 */
+.nav-div5-34{
+	margin-top:18px;
+	width: 265px;
+	float: left; /*让两个div能在一行  */
+}
+/* 5 */
+.nav-div5-5{
+	margin-top:18px;
+	width: 57px;
+	float: left; /*让两个div能在一行  */
+}
+.nav-div5 a:visited{
+	color: black;
+}

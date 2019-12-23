@@ -1,0 +1,13 @@
+/*歌单css*/
+.footer_head_line{
+	color: black;
+}
+/* 去掉下划线 */
+.footer_head_line:hover {
+	text-decoration: none;
+}
+/*图片大小*/
+.nav-avatar img{
+	width: 241px;
+	height: 241px;
+}

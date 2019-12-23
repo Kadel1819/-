@@ -1,0 +1,70 @@
+/*<<页头分类>>*/
+/* 页头热门*/
+.section-ul-one>li {
+	display: inline-block; /* 浮动为一行 */
+	text-align: center; /* 字居中 */
+	margin-right:10px;/* 右外边距 */
+	width: 28px;/* 宽度 */
+	height: 28px;/* 高度 */
+	border-radius: 20px;/* 圆角 */
+}
+/* 页头全部 */
+.section-ul-two>li {
+	display: inline-block; /* 浮动为一行 */
+	text-align: center; /* 字居中 */
+	width: 56px;/* 宽度 */
+	height: 28px;/* 高度 */
+	margin-right:10px;
+	border-radius: 20px;/* 圆角 */
+}
+/* 页头所div里面的字水平居中 */
+.section-ul-two>li ,.section-ul-one>li{
+	padding-top: 5px;/* 水平居中 */
+}
+.section-ul-two>li>a ,.section-ul-one>li>a{
+	color: black;/* 字体颜色 */
+	text-decoration: none;/* 去掉标签自带的下划线 */
+}
+/*-----歌手头像-----*/
+/* 歌手头像-外 */
+.nav-avatar>div{
+	height:240px;/* 高度 */
+}
+/* 歌手头像-内 */
+.nav-avatar>div>div{
+	height:183px;/* 高度 */
+	border-radius: 100px;/* 圆角 */
+}
+/* 歌手头像img样式 */
+.nav-avatar img{
+	width: 183px;/* 宽度 */
+	height:183px;/* 高度 */
+	border-radius: 100px;/* 圆角 */
+}
+.nav-avatar>div>div>div{
+	margin-top:15px;
+	text-align: center;/* 文字居中 */
+}
+/*歌手头像小*/
+.nav-avatar-small>div{
+	height: 38px;
+}
+/* 歌手头像小内div */
+.nav-avatar-small>div>div{
+	height: 38px;
+}
+/* 去掉标签自带的下划线  */
+.nav-avatar-small>div>div a{
+	color: black;/* 字体颜色 */
+	text-decoration: none;/* 去掉标签自带的下划线 */
+}
+/*图片大小*/
+.nav-avatar-small>div img{
+	height: 38px;/* 高度 */
+	width: 38px;/* 宽度 */
+	border-radius: 20px;/* 圆角 */
+}
+/* 歌手头像小内div字移位 */
+.nav-avatar-small>div>div span{
+	margin-left: 10px;
+}
